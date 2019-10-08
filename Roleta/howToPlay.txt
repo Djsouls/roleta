@@ -1,0 +1,1 @@
+Just run python3 __init__.py to play the game
