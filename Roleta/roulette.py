@@ -167,7 +167,7 @@ class Roulette:
         return self.betValue * (36 // len(self.winningRange))
 
     def showBets(self, player):
-        print('Dinheiro da banca: {}'.format(self.bank.chips))
+        print('\nDinheiro da banca: {}'.format(self.bank.chips))
         print('Jogador: {}'.format(player.name))
         print('Seu dinheiro: {}'.format(player.chips))
         print('Rounds passados: {}'.format(player.skippedBets))

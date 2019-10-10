@@ -22,8 +22,9 @@ class Game:
         self.roulette.getBets()
 
     def getResults(self):
+        bankProfit = 0
         result = randint(0, 36)
-        msg = 'Resultado: {}\n'.format(result)
+        msg = '\nResultado: {}\n'.format(result)
         for player in self.players:
             if player.bet.betType == 0:
                 msg += 'Jogador {} passou\n'.format(player.name)
@@ -34,6 +35,9 @@ class Game:
                 msg += 'Jogador {} ganhou {}\n'.format(player.name, player.bet.winningPrize)
             else:
                 self.roulette.bank.chips += player.bet.betValue
+                bankProfit += player.bet.betValue
+        msg += 'Banca ganhou {} nessa rodada de apostas'.format(bankProfit)
+
         print(msg)
 
     def eliminatePlayers(self):

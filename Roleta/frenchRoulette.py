@@ -1,4 +1,5 @@
 from roulette import Roulette
+from bet import Bet
 
 class FrenchRoulette(Roulette):
     def __init__(self, players):
